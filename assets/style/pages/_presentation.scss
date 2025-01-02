@@ -1,0 +1,101 @@
+.presentation {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 55vh;
+
+    .description-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 35px;
+        background-color: whitesmoke;
+        outline: 1px dashed $color1;
+        outline-offset: -20px;
+
+        .description {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-size: 2.5rem;
+            text-transform: capitalize;
+            text-align: center;
+            font-weight: 400;
+            margin-bottom: -20px;
+        }
+
+        h2 {    
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: bold;
+            font-family: $font-poppins;  
+        }
+
+        .img-plate {
+            position: relative;
+            margin-top: -25px;
+            margin-left: 20px;   
+        }
+
+        p {
+            font-family: $font-roboto;
+            font-size: 1.3rem;
+            margin-left: 20px;
+            margin-right: 20px;
+            text-align: center;
+        }
+
+        .img-avatar1 {
+            display: block;
+            margin: 0 auto;
+
+            img {
+                border-radius: 50%;
+                width: 90px;
+                height: 90px;
+            }
+        }
+
+        .name-chief {
+            text-align: center;
+            font-family: $font-poppins;
+            margin-top: -15px;
+
+            h4 {
+                font-size: 1.2rem;
+                text-transform: capitalize;
+                font-weight: 400;
+                margin-top: -10px;
+            }
+
+            p {
+                font-size: 0.9rem;
+                text-transform: uppercase;
+                font-weight: 600;
+                color: rgb(180, 180, 180);
+            }
+        }
+    }
+    
+    .description-right {
+        background: url(../img/dish-gallery-06.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+}   
+@media screen and (max-width: 970px) {
+        .presentation {
+            display: grid;
+            grid-template-columns: 100%;
+        }
+        .description-left {
+            display: flex;        
+        }
+        .description-right {
+            display: none;
+        } 
+    }
+

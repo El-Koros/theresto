@@ -31,10 +31,18 @@
   height: 50px;
 }
 
+.img-plate {
+  background: url(../img/ic-plate.png) no-repeat;
+  background-size: 35px 35px;
+  width: 50px;
+  height: 50px;
+}
+
 .header {
   height: 100vh;
   background: url(../img/bg-slider-06.jpg);
   background-size: cover;
+  background-position: center;
   color: white;
 }
 .header nav {
@@ -153,4 +161,105 @@
   margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 8px;
+}
+
+.presentation {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 55vh;
+}
+.presentation .description-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 35px;
+  background-color: whitesmoke;
+  outline: 1px dashed #a67245;
+  outline-offset: -20px;
+}
+.presentation .description-left .description {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.presentation .description-left h3 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: -20px;
+}
+.presentation .description-left h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-family: Poppins, sans-serif;
+}
+.presentation .description-left .img-plate {
+  position: relative;
+  margin-top: -25px;
+  margin-left: 20px;
+}
+.presentation .description-left p {
+  font-family: Roboto, sans-serif;
+  font-size: 1.3rem;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+.presentation .description-left .img-avatar1 {
+  display: block;
+  margin: 0 auto;
+}
+.presentation .description-left .img-avatar1 img {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+}
+.presentation .description-left .name-chief {
+  text-align: center;
+  font-family: Poppins, sans-serif;
+  margin-top: -15px;
+}
+.presentation .description-left .name-chief h4 {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  font-weight: 400;
+  margin-top: -10px;
+}
+.presentation .description-left .name-chief p {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgb(180, 180, 180);
+}
+.presentation .description-right {
+  background: url(../img/dish-gallery-06.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 970px) {
+  .presentation {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .description-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .description-right {
+    display: none;
+  }
 }/*# sourceMappingURL=index.css.map */
