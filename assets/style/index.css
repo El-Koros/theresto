@@ -307,6 +307,11 @@
   position: absolute;
   bottom: 0;
 }
+@media screen and (max-width: 990px) {
+  .title::after {
+    width: 75%;
+  }
+}
 .title h3 {
   text-transform: capitalize;
   font-size: 2.5rem;
@@ -336,6 +341,16 @@
           align-items: flex-start;
   gap: 135px;
   margin-top: 30px;
+}
+@media screen and (max-width: 990px) {
+  .title ul {
+    gap: 80px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .title ul {
+    gap: 40px;
+  }
 }
 .title ul li {
   font-size: 1.2rem;

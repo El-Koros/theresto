@@ -28,6 +28,12 @@
             width: 52%;
             position: absolute;
             bottom: 0;
+
+            @media screen and (max-width: 990px) {
+                width: 75%;
+            }
+
+            
         }
 
         h3 {
@@ -53,6 +59,14 @@
             gap: 135px;
             margin-top: 30px;
 
+            @media screen and (max-width: 990px) {
+                gap: 80px;
+            }
+
+            @media screen and (max-width: 660px) {
+                gap: 40px;
+            }
+
             li {
                 font-size: 1.2rem;
                 font-weight: 400;
@@ -63,6 +77,8 @@
                 text-underline-offset: 15px;  
             }
         }
+
+        
     }
 
     .plate-menu {
