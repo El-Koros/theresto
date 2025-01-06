@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Allura";
   src: url(../fonts/Allura-Regular.ttf);
@@ -274,6 +275,12 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+@media screen and (max-width: 990px) {
+  .menu {
+    height: 350vh;
+    background-size: auto;
+  }
+}
 
 .title {
   display: -webkit-box;
@@ -349,6 +356,13 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+@media screen and (max-width: 990px) {
+  .plate-menu {
+    display: block;
+    height: 80%;
+    width: 75%;
+  }
+}
 .plate-menu .dishes {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -357,18 +371,106 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 15px;
+  position: relative;
+  width: 100%;
+}
+@media screen and (max-width: 990px) {
+  .plate-menu .dishes {
+    height: 12%;
+  }
+}
+.plate-menu .dishes::after {
+  content: "";
+  height: 1px;
+  width: 95%;
+  position: absolute;
+  bottom: 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.157);
+}
+@media screen and (max-width: 990px) {
+  .plate-menu .dishes::after {
+    width: 85%;
+    left: 50px;
+  }
+}
+.plate-menu .dishes .img-dish {
+  margin-left: 10px;
 }
 .plate-menu .dishes .img-dish img {
   border-radius: 50%;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  width: 80px; /* Taille par défaut */
+  height: 80px; /* Taille par défaut */
+  -o-object-fit: cover;
+     object-fit: cover; /* Pour conserver le ratio */
+}
+@media screen and (max-width: 1250px) {
+  .plate-menu .dishes .img-dish img img {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    width: 50px;
+    height: 50px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .plate-menu .dishes .img-dish img img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    width: 80px; /* Taille par défaut */
+    height: 80px; /* Taille par défaut */
+    -o-object-fit: cover;
+       object-fit: cover; /* Pour conserver le ratio */
+  }
+}
+.plate-menu .dishes .text-dish {
+  width: 60%;
+  line-height: 25px;
 }
 .plate-menu .dishes .text-dish h4 {
   text-transform: uppercase;
   text-align: left;
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+}
+.plate-menu .dishes .text-dish p {
+  text-align: left;
+  font-family: Roboto, sans-serif;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 1250px) {
+  .plate-menu .dishes .text-dish h4 {
+    font-size: 0.8rem;
+  }
+  .plate-menu .dishes .text-dish p {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 990px) {
+  .plate-menu .dishes .text-dish h4 {
+    font-size: 1.1rem;
+  }
+  .plate-menu .dishes .text-dish p {
+    font-size: 1.2rem;
+  }
+}
+.plate-menu .dishes .price-dish {
+  width: 60px;
+  text-align: left;
+  font-size: 1.4rem;
+  font-family: Roboto, sans-serif;
+  color: #a67245;
+}
+@media screen and (max-width: 1250px) {
+  .plate-menu .dishes .price-dish {
+    font-size: 1.2rem;
+  }
 }/*# sourceMappingURL=index.css.map */
