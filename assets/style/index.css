@@ -274,8 +274,8 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
-.menu .title {
-  border: 1px solid red;
+
+.title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -290,20 +290,29 @@
       -ms-flex-align: center;
           align-items: center;
   height: 32vh;
+  position: relative;
 }
-.menu .title h3 {
+.title::after {
+  content: "";
+  height: 5px;
+  background-color: #a67245;
+  width: 52%;
+  position: absolute;
+  bottom: 0;
+}
+.title h3 {
   text-transform: capitalize;
   font-size: 2.5rem;
   font-weight: 400;
   margin-top: 20px;
   padding-top: 15px;
 }
-.menu .title .img-plate {
+.title .img-plate {
   position: relative;
   margin-top: 40px;
   margin-left: 25px;
 }
-.menu .title ul {
+.title ul {
   height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -321,7 +330,7 @@
   gap: 135px;
   margin-top: 30px;
 }
-.menu .title ul li {
+.title ul li {
   font-size: 1.2rem;
   font-weight: 400;
   cursor: pointer;
@@ -330,7 +339,36 @@
   text-decoration: underline;
   text-underline-offset: 15px;
 }
-.menu .plate-menu {
+
+.plate-menu {
   background-color: white;
   color: black;
+  width: 52%;
+  margin: 0 auto;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.plate-menu .dishes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.plate-menu .dishes .img-dish img {
+  border-radius: 50%;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.plate-menu .dishes .text-dish h4 {
+  text-transform: uppercase;
+  text-align: left;
 }/*# sourceMappingURL=index.css.map */

@@ -7,13 +7,25 @@
     background-repeat: no-repeat;
     background-size: contain; 
 
+    
+}
+
     .title {
-        border: 1px solid red;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 32vh;
+        position: relative;
+
+        &::after {
+            content: "";
+            height: 5px;
+            background-color: $color1;
+            width: 52%;
+            position: absolute;
+            bottom: 0;
+        }
 
         h3 {
             text-transform: capitalize;
@@ -53,5 +65,35 @@
     .plate-menu {
         background-color: white;
         color: black;
-    }
+        width: 52%;
+        margin: 0 auto;
+        height: 80vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .dishes {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+
+
+            .img-dish {
+                img {
+                    border-radius: 50%;
+                    transform: scale(1.1);
+                }
+            }
+
+            .text-dish {
+                
+
+                h4 {
+                    text-transform: uppercase;
+                    text-align: left;
+                }
+            }
+        }
+
+        
 }
