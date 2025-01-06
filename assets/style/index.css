@@ -36,6 +36,8 @@
   background-size: 35px 35px;
   width: 50px;
   height: 50px;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .header {
@@ -262,4 +264,73 @@
   .description-right {
     display: none;
   }
+}
+.menu {
+  height: 123vh;
+  background-color: rgb(33, 33, 33);
+  color: white;
+  background-image: url(../img/bg-menu-01.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.menu .title {
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 32vh;
+}
+.menu .title h3 {
+  text-transform: capitalize;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-top: 20px;
+  padding-top: 15px;
+}
+.menu .title .img-plate {
+  position: relative;
+  margin-top: 40px;
+  margin-left: 25px;
+}
+.menu .title ul {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 135px;
+  margin-top: 30px;
+}
+.menu .title ul li {
+  font-size: 1.2rem;
+  font-weight: 400;
+  cursor: pointer;
+  font-family: Roboto, sans-serif;
+  text-transform: capitalize;
+  text-decoration: underline;
+  text-underline-offset: 15px;
+}
+.menu .plate-menu {
+  background-color: white;
+  color: black;
 }/*# sourceMappingURL=index.css.map */
