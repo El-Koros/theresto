@@ -1,5 +1,102 @@
+* {
+   border: 1px solid red; 
+}
+
 .reservation {
     background-color: rgb(33, 33, 33);
     color: white;
-    height: 70vh;
+    height: 83vh;
+    padding: 95px 0;
+
+    .reservation-container {
+        
+        display: grid;
+        grid-template-columns: 30% 70%;
+        align-items: center;
+        padding: 0 300px;
+        height: 100%;
+        
+
+        .reservation-left {
+            background-color: black;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 70px;
+            outline: 1px dashed white;
+            outline-offset: -35px;
+
+            .time-title {
+                h3{
+                    font-size: 3rem;
+                    font-weight: 400;
+                    line-height: 30px;
+                    text-align: center;
+
+                }
+
+                h2 {
+                    font-size: 1.7rem;
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-weight: bold;
+                    font-family: $font-poppins;
+                    line-height: 25px;
+                    letter-spacing: 3px;
+                }
+            }
+
+            .img-plate {
+                margin-top: -20px;
+                img {
+                    display: flex;
+                    justify-content: center;
+                    max-width: 100%; /* Ensure the image fits within the container */
+                    height: auto; /* Maintain aspect ratio */
+                }   
+            }
+
+            .time-week, .time-week-end {
+
+                h4 {
+                    color: $color1;
+                    font-size: 1.2rem;
+                    text-transform: uppercase;
+                    font-family: $font-roboto;
+                    letter-spacing: 2px;
+                    margin-bottom: 25px;;
+                }
+
+                p {
+                    text-align: center;
+                    font-family: $font-roboto;
+                    line-height: 20px;
+                }
+            }
+
+            .time-week {
+                margin-top: -25px;
+            }
+
+            .time-week-end {
+                margin-top: -35px;
+            }
+
+            .num-tel{
+                color: $color1;
+                font-size: 1.3rem;
+                margin-top: -50px;
+                font-family: $font-roboto;
+                font-weight: 600;
+                letter-spacing: 2px;
+            }
+
+        }
+
+        .reservation-right {
+            height: 100%;
+        }
+    }
 }

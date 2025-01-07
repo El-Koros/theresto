@@ -48,7 +48,7 @@
                 <h3 class="up-title">discover</h3>
                 <h2>our store</h2>
             </div>
-            <div class="img-plate"></div>
+            <div class="img-plate"><img src="./assets/img/ic-plate.png" alt="plate"></div>
             <div class="text-descrip">
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, placeat voluptate debitis repellendus vitae officiis illo fuga in architecto sequi doloribus, quam eum, minus reiciendis maxime illum consequatur iure deleniti.
                 </p>
@@ -65,11 +65,11 @@
     </section>
 
     <section class="menu">
-        <div class="title">
+        <div class="title-menu">
             <div class="menu-title">
                 <h3 class="up-title">discover</h3>
             </div>
-            <div class="img-plate"></div>
+            <div class="img-plate"><img src="./assets/img/ic-plate.png" alt="plate"></div>
             <div class="menu-top">
                 <ul>
                     <li>Breakfast</li>
@@ -165,53 +165,55 @@
     </section>
 
     <section class="reservation"> 
-        <div class="reservation-left">
-            <div class="time-title">
-                <h3 class="up-title">Time</h3>
-                <h2>open</h2>
+        <div class="reservation-container">
+            <div class="reservation-left">
+                <div class="time-title">
+                    <h3 class="up-title">Time</h3>
+                    <h2>open</h2>
+                </div>
+                <div class="img-plate"><img src="./assets/img/ic-plate.png" alt="plate"></div>
+                <div class="time-week">
+                    <h4>Monday - friday</h4>
+                    <p>7AM - 11AM (Breakfast)</p>
+                    <p>11AM - 10AM (Lunch/Dinner)</p>
+                </div>
+                <div class="time-week-end">
+                    <h4>Saturday / Sunday</h4>
+                    <p>8AM - 1AM (Brunch)</p>
+                    <p>1AM - 9AM (Lunch/Dinner)</p>
+                </div>
+                <div class="num-tel">
+                    <p>+ 15 890 979 25 52</p>
+                </div>
             </div>
-            <div class="img-icon"></div>
-            <div class="time-week">
-                <h4>Monday - friday</h4>
-                <p>7am - 11am (Breakfast)</p>
-                <p>11am - 10pm (Lunch/Dinner)</p>
+            <div class="reservation-right">
+                <div class="reservation-title">
+                    <h4 class="up-title">Reservation</h4>
+                    <h3>Online booking</h3>
+                </div>
+                <div class="img-icon"></div>
+                <form action="">
+                    <label for="People" name="People">People</label>
+                    <input type="number" id="People" name="People" min="1" max="10" required>
+
+                    <label for="Date" name="Date">Date</label>
+                    <input type="date" id="Date" name="Date" value="Date" required>
+
+                    <label for="time" name="time"></label>
+                    <input type="time" id="time" name="time">
+
+                    <label for="name" name="name">Name</label>
+                    <input type="text" id="name" name="name">
+
+                    <label for="Phone" name="Phone">Phone</label>
+                    <input type="text" id="Phone" name="Phone">
+
+                    <label for="Email" name="Email">Email</label>
+                    <input type="text" id="Email" name="Email">
+
+                    <input type="submit" value="Book Now" >
+                </form>
             </div>
-            <div class="time-week-end">
-                <h4>Saturday / Sunday</h4>
-                <p>8am - 1pm (Brunch)</p>
-                <p>1pm - 9pm (Lunch/Dinner)</p>
-            </div>
-            <div class="num-tel">
-                <p>+ 15 890 979 25 52</p>
-            </div>
-        </div>
-        <div class="reservation-right">
-            <div class="reservation-title">
-                <h4 class="up-title">Reservation</h4>
-                <h3>Online booking</h3>
-            </div>
-            <div class="img-icon"></div>
-            <form action="">
-                <label for="People" name="People">People</label>
-                <input type="number" id="People" name="People" min="1" max="10" required>
-
-                <label for="Date" name="Date">Date</label>
-                <input type="date" id="Date" name="Date" value="Date" required>
-
-                <label for="time" name="time"></label>
-                <input type="time" id="time" name="time">
-
-                <label for="name" name="name">Name</label>
-                <input type="text" id="name" name="name">
-
-                <label for="Phone" name="Phone">Phone</label>
-                <input type="text" id="Phone" name="Phone">
-
-                <label for="Email" name="Email">Email</label>
-                <input type="text" id="Email" name="Email">
-
-                <input type="submit" value="Book Now" >
-            </form>
         </div>
     </section>
 
