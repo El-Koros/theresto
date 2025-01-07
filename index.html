@@ -188,30 +188,35 @@
             </div>
             <div class="reservation-right">
                 <div class="reservation-title">
-                    <h4 class="up-title">Reservation</h4>
-                    <h3>Online booking</h3>
+                    <h3 class="up-title">Reservation</h3>
+                    <h2>Online booking</h2>
                 </div>
-                <div class="img-icon"></div>
-                <form action="">
-                    <label for="People" name="People">People</label>
-                    <input type="number" id="People" name="People" min="1" max="10" required>
-
-                    <label for="Date" name="Date">Date</label>
-                    <input type="date" id="Date" name="Date" value="Date" required>
-
-                    <label for="time" name="time"></label>
-                    <input type="time" id="time" name="time">
-
-                    <label for="name" name="name">Name</label>
-                    <input type="text" id="name" name="name">
-
-                    <label for="Phone" name="Phone">Phone</label>
-                    <input type="text" id="Phone" name="Phone">
-
-                    <label for="Email" name="Email">Email</label>
-                    <input type="text" id="Email" name="Email">
-
-                    <input type="submit" value="Book Now" >
+                <div class="img-plate"><img src="./assets/img/ic-plate.png" alt="plate"></div>
+                <form class="reservation-form">
+                    <div class="form-row">
+                        <select name="people">
+                            <option value="1">1 Person</option>
+                            <option value="2">2 People</option>
+                            <option value="3">3 People</option>
+                            <option value="4">4 People</option>
+                            <option value="5">5 People</option>
+                            <option value="6">6 People</option>
+                            <option value="7">7 People</option>
+                            <option value="8">8 People</option>
+                            <option value="9">9 People</option>
+                            <option value="10">10 People</option>
+                        </select>
+                        <input type="text" name="name" placeholder="Name">                       
+                    </div>
+                    <div class="form-row">
+                        <input type="date" name="date" placeholder="Date">
+                        <input type="text" name="phone" placeholder="Phone">
+                    </div>
+                    <div class="form-row">
+                        <input type="time" name="time" placeholder="Time">
+                        <input type="email" name="email" placeholder="Email">
+                    </div>
+                    <button type="submit" class="btn-submit">Book Now</button>
                 </form>
             </div>
         </div>
