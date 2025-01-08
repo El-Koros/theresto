@@ -193,31 +193,27 @@
                 </div>
                 <div class="img-plate"><img src="./assets/img/ic-plate.png" alt="plate"></div>
                 <form class="reservation-form">
-                    <div class="form-row">
-                        <select name="people">
-                            <option value="1">1 Person</option>
-                            <option value="2">2 People</option>
-                            <option value="3">3 People</option>
-                            <option value="4">4 People</option>
-                            <option value="5">5 People</option>
-                            <option value="6">6 People</option>
-                            <option value="7">7 People</option>
-                            <option value="8">8 People</option>
-                            <option value="9">9 People</option>
-                            <option value="10">10 People</option>
-                        </select>
-                        <input type="text" name="name" placeholder="Name">                       
-                    </div>
-                    <div class="form-row">
-                        <input type="date" name="date" placeholder="Date">
-                        <input type="text" name="phone" placeholder="Phone">
-                    </div>
-                    <div class="form-row">
-                        <input type="time" name="time" placeholder="Time">
-                        <input type="email" name="email" placeholder="Email">
-                    </div>
-                    <button type="submit" class="btn-submit">Book Now</button>
+                    <select name="people" required>
+                        <option value="" disabled selected>People</option>
+                        <option value="1">1 Person</option>
+                        <option value="2">2 People</option>
+                        <option value="3">3 People</option>
+                        <option value="4">4 People</option>
+                    </select>
+            
+                    <input type="date" required>
+                    
+                    <input type="time" required>
+                    
+                    <input type="text" placeholder="Name" required>
+                    
+                    <input type="tel" placeholder="Phone" required>
+                    
+                    <input type="email" placeholder="Email" required>
+            
+                    <button type="submit" class="book-now">BOOK NOW</button>
                 </form>
+            </div>
             </div>
         </div>
     </section>

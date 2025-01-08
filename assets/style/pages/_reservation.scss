@@ -89,20 +89,17 @@
             }
 
         }
-        .reservation-right, .reservation-title {
-            border: 1px solid red;
-        }  
+
         .reservation-right {
             background-color: whitesmoke;
             color: black;
             height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 120px;
+            display: grid;
+            grid-template-rows: 35% 15% 40%;
 
             .reservation-title {
+                padding-top: 90px;
+                margin-bottom: -25px;
                 h3 {
                     font-size: 3.5rem;
                     font-weight: 400;
@@ -115,92 +112,55 @@
                     font-weight: 600;
                     font-family: $font-poppins;
                     margin-top: -25px;
+                    text-align: center;
                 }
-            }
-
+            } 
+            
             .img-plate {
-                display: flex;
-                justify-content: center; /* Centre horizontalement l'image */
-                align-items: flex-start; /* Positionne l'image vers le haut */
-                height: auto; /* Ajuste la hauteur au besoin */
-                margin-bottom: 30px;
-                margin-top: -60px; /* Ajuste l'espacement en bas */
-
-                .img-plate img {
-                    max-width: 80%; /* Réduit la largeur de l'image */
-                    height: auto; /* Conserve le ratio de l'image */
-                    object-fit: contain; /* S'assure que l'image est contenue correctement */
-
-                }
+                margin: 0 auto;
             }
 
             .reservation-form {
-                display: grid; /* Mise en grille */
-                grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
-                gap: 20px; /* Espacement horizontal entre les colonnes */
-                width: 60%; /* Largeur du formulaire */
-                margin: 0 auto; /* Centrer le formulaire */
-                font-family: $font-poppins; /* Police élégante (ajoutez cette police via Google Fonts) */
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                padding: 0 70px;
+                height: 200px;
 
-                .reservation-form input,
-                .reservation-form select {
-                    padding: 10px 0; /* Ajoute des marges internes */
-                    font-size: 1rem;
-                    border: none; /* Supprime les bordures */
-                    border-bottom: 2px solid #ddd; /* Ajoute une bordure uniquement en bas */
-                    outline: none; /* Supprime l'effet bleu des navigateurs */
-                    background: transparent; /* Fond transparent pour imiter la photo */
-                    color: #333; /* Couleur du texte */
-                    transition: border-color 0.3s ease;
-                    width: 100%;
-                }
+                input, select {
+                    width: 100%; // Prend toute la largeur de son conteneur
+                    padding: 10px 0; // Espace vertical pour un effet minimaliste
+                    border: none; // Pas de bordure sur les côtés
+                    border-bottom: 2px solid #ccc; // Bordure uniquement en bas
+                    background: transparent; // Fond transparent
+                    font-size: 16px; // Taille de police pour le texte
+                    color: #333; // Couleur du texte
                 
-                .reservation-form input::placeholder {
-                    color: #aaa; /* Couleur du placeholder */
-                    font-size: 0.9rem; /* Taille légèrement réduite */
-                }
+                    &:focus {
+                      outline: none; // Supprime le contour bleu par défaut
+                      border-bottom-color: #d4a373; // Change la couleur de la bordure au focus
+                    }
                 
-                .reservation-form select {
-                    -webkit-appearance: none; /* Supprime le style par défaut du select */
-                    -moz-appearance: none;
-                    appearance: none;
-                    background: transparent;
-                    cursor: pointer;
+                    &::placeholder {
+                      color: #aaa; // Couleur des placeholders
+                      font-style: italic; // Placeholder en italique
+                    }
                 }
-                
-                .reservation-form input:focus,
-                .reservation-form select:focus {
-                    border-bottom: 2px solid #333; /* Change la couleur de la bordure au focus */
-                }
-                
-                .reservation-form .btn-submit {
-                    grid-column: span 3; /* Le bouton occupe toute la largeur des colonnes */
-                    letter-spacing: 5px;
-                    padding: 15px 20px;
-                    font-size: 1.1rem;
+
+                button {
+                    grid-column: 2 / span 1;
+                    padding: 10px 20px;
                     background-color: black;
-                    color: white;
+                    color: #fff;
                     border: none;
-                    border-radius: 100px;
                     cursor: pointer;
-                    text-transform: uppercase;
-                    margin: 20px auto; /* Centrer le bouton */
-                    width: 50%; /* Largeur du bouton */
-                    text-align: center;
+                    font-size: 16px;
+                    transition: background-color 0.3s ease;
+                    border-radius: 100px;
                 }
-                
-                .reservation-form .btn-submit:hover {
-                    background-color: #555; /* Couleur différente au survol */
-                }
-                
             }
-            
-            
-            
-            
-            
-            
         }
-            
     }
 }

@@ -572,27 +572,16 @@
   font-weight: 600;
   letter-spacing: 2px;
 }
-.reservation .reservation-container .reservation-right, .reservation .reservation-container .reservation-title {
-  border: 1px solid red;
-}
 .reservation .reservation-container .reservation-right {
   background-color: whitesmoke;
   color: black;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 120px;
+  display: grid;
+  grid-template-rows: 35% 15% 40%;
+}
+.reservation .reservation-container .reservation-right .reservation-title {
+  padding-top: 90px;
+  margin-bottom: -25px;
 }
 .reservation .reservation-container .reservation-right .reservation-title h3 {
   font-size: 3.5rem;
@@ -605,94 +594,66 @@
   font-weight: 600;
   font-family: Poppins, sans-serif;
   margin-top: -25px;
-}
-.reservation .reservation-container .reservation-right .img-plate {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; /* Centre horizontalement l'image */
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start; /* Positionne l'image vers le haut */
-  height: auto; /* Ajuste la hauteur au besoin */
-  margin-bottom: 30px;
-  margin-top: -60px; /* Ajuste l'espacement en bas */
-}
-.reservation .reservation-container .reservation-right .img-plate .img-plate img {
-  max-width: 80%; /* Réduit la largeur de l'image */
-  height: auto; /* Conserve le ratio de l'image */
-  -o-object-fit: contain;
-     object-fit: contain; /* S'assure que l'image est contenue correctement */
-}
-.reservation .reservation-container .reservation-right .reservation-form {
-  display: grid; /* Mise en grille */
-  grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
-  gap: 20px; /* Espacement horizontal entre les colonnes */
-  width: 60%; /* Largeur du formulaire */
-  margin: 0 auto; /* Centrer le formulaire */
-  font-family: Poppins, sans-serif; /* Police élégante (ajoutez cette police via Google Fonts) */
-}
-.reservation .reservation-container .reservation-right .reservation-form .reservation-form input,
-.reservation .reservation-container .reservation-right .reservation-form .reservation-form select {
-  padding: 10px 0; /* Ajoute des marges internes */
-  font-size: 1rem;
-  border: none; /* Supprime les bordures */
-  border-bottom: 2px solid #ddd; /* Ajoute une bordure uniquement en bas */
-  outline: none; /* Supprime l'effet bleu des navigateurs */
-  background: transparent; /* Fond transparent pour imiter la photo */
-  color: #333; /* Couleur du texte */
-  -webkit-transition: border-color 0.3s ease;
-  transition: border-color 0.3s ease;
-  width: 100%;
-}
-.reservation .reservation-container .reservation-right .reservation-form .reservation-form input::-webkit-input-placeholder {
-  color: #aaa; /* Couleur du placeholder */
-  font-size: 0.9rem; /* Taille légèrement réduite */
-}
-.reservation .reservation-container .reservation-right .reservation-form .reservation-form input::-moz-placeholder {
-  color: #aaa; /* Couleur du placeholder */
-  font-size: 0.9rem; /* Taille légèrement réduite */
-}
-.reservation .reservation-container .reservation-right .reservation-form .reservation-form input:-ms-input-placeholder {
-  color: #aaa; /* Couleur du placeholder */
-  font-size: 0.9rem; /* Taille légèrement réduite */
-}
-.reservation .reservation-container .reservation-right .reservation-form .reservation-form input::-ms-input-placeholder {
-  color: #aaa; /* Couleur du placeholder */
-  font-size: 0.9rem; /* Taille légèrement réduite */
-}
-.reservation .reservation-container .reservation-right .reservation-form .reservation-form input::placeholder {
-  color: #aaa; /* Couleur du placeholder */
-  font-size: 0.9rem; /* Taille légèrement réduite */
-}
-.reservation .reservation-container .reservation-right .reservation-form .reservation-form select {
-  -webkit-appearance: none; /* Supprime le style par défaut du select */
-  -moz-appearance: none;
-  appearance: none;
-  background: transparent;
-  cursor: pointer;
-}
-.reservation .reservation-container .reservation-right .reservation-form .reservation-form input:focus,
-.reservation .reservation-container .reservation-right .reservation-form .reservation-form select:focus {
-  border-bottom: 2px solid #333; /* Change la couleur de la bordure au focus */
-}
-.reservation .reservation-container .reservation-right .reservation-form .reservation-form .btn-submit {
-  grid-column: span 3; /* Le bouton occupe toute la largeur des colonnes */
-  letter-spacing: 5px;
-  padding: 15px 20px;
-  font-size: 1.1rem;
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 100px;
-  cursor: pointer;
-  text-transform: uppercase;
-  margin: 20px auto; /* Centrer le bouton */
-  width: 50%; /* Largeur du bouton */
   text-align: center;
 }
-.reservation .reservation-container .reservation-right .reservation-form .reservation-form .btn-submit:hover {
-  background-color: #555; /* Couleur différente au survol */
+.reservation .reservation-container .reservation-right .img-plate {
+  margin: 0 auto;
+}
+.reservation .reservation-container .reservation-right .reservation-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  padding: 0 70px;
+  height: 200px;
+}
+.reservation .reservation-container .reservation-right .reservation-form input, .reservation .reservation-container .reservation-right .reservation-form select {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: transparent;
+  font-size: 16px;
+  color: #333;
+}
+.reservation .reservation-container .reservation-right .reservation-form input:focus, .reservation .reservation-container .reservation-right .reservation-form select:focus {
+  outline: none;
+  border-bottom-color: #d4a373;
+}
+.reservation .reservation-container .reservation-right .reservation-form input::-webkit-input-placeholder, .reservation .reservation-container .reservation-right .reservation-form select::-webkit-input-placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+.reservation .reservation-container .reservation-right .reservation-form input::-moz-placeholder, .reservation .reservation-container .reservation-right .reservation-form select::-moz-placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+.reservation .reservation-container .reservation-right .reservation-form input:-ms-input-placeholder, .reservation .reservation-container .reservation-right .reservation-form select:-ms-input-placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+.reservation .reservation-container .reservation-right .reservation-form input::-ms-input-placeholder, .reservation .reservation-container .reservation-right .reservation-form select::-ms-input-placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+.reservation .reservation-container .reservation-right .reservation-form input::placeholder, .reservation .reservation-container .reservation-right .reservation-form select::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+.reservation .reservation-container .reservation-right .reservation-form button {
+  grid-column: 2/span 1;
+  padding: 10px 20px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  border-radius: 100px;
 }/*# sourceMappingURL=index.css.map */
