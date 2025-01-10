@@ -93,6 +93,10 @@
   font-size: 0.9rem;
   font-family: Roboto, sans-serif;
 }
+.header nav ul.choices li:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
 @media screen and (max-width: 900px) {
   .header nav ul.choices {
     font-size: 0.7rem;
@@ -116,6 +120,10 @@
           align-items: center;
   gap: 25px;
   margin-left: 10px;
+}
+.header nav ul.brand li:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 .header .title-middle {
   display: -webkit-box;
@@ -352,6 +360,10 @@
   text-transform: capitalize;
   text-decoration: underline;
   text-underline-offset: 15px;
+}
+.title-menu ul li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .plate-menu {
@@ -681,6 +693,9 @@
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   border-radius: 100px;
+}
+.reservation .reservation-container .reservation-right .reservation-form button:hover {
+  background-color: #a67245;
 }
 @media screen and (max-width: 1200px) {
   .reservation .reservation-container .reservation-right .reservation-form {
@@ -1170,4 +1185,8 @@ footer .footer-right .social ul {
   gap: 40px;
   margin: 50px 0 0 20px;
   color: rgba(255, 255, 255, 0.26);
+}
+footer .footer-right .social ul li:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }/*# sourceMappingURL=index.css.map */

@@ -36,6 +36,13 @@
             font-size: 0.9rem;
             font-family: $font-roboto;
 
+            li {
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+
+
             @media screen and (max-width: 900px) {
                 font-size: 0.7rem;
             }
@@ -52,6 +59,12 @@
             align-items: center;
             gap: 25px;
             margin-left: 10px;
+
+            li {
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
         }   
     }
 
