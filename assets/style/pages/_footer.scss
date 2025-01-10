@@ -1,0 +1,42 @@
+footer {
+    background: url(../img/bg-footer.jpg) no-repeat;
+    color: white;
+    height: 35vh;
+    display: flex;
+
+    justify-content: center;
+
+    .footer-left {
+        flex: 5;
+        display: grid;
+        grid-template-columns: 35% 65%;
+        margin-right: 60px;
+
+        .text-resto {
+            h4 {
+                font-size: 3.2rem;
+                font-family: Roboto, sans-serif;
+                text-transform: capitalize;
+                font-weight: 400;
+                margin-top: 60px;
+                font-family: $font-allura;
+            }
+
+            p {
+                font-size: 1.2rem;
+                font-family: $font-roboto;
+                font-weight: 100;
+                margin-top: 10px;
+                line-height: 30px;
+                color: rgba(255, 255, 255, 0.603);
+            }
+        }
+    }
+
+    .footer-right {
+        flex: 5;
+        display: grid;
+        grid-template-rows: 50% 50%;
+        margin-top: 60px;
+    }
+}
