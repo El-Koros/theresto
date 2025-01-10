@@ -1,5 +1,5 @@
 footer {
-    background: url(../img/bg-footer.jpg) no-repeat;
+    background: url(../img/bg-footer.jpg) no-repeat center;
     color: white;
     height: 35vh;
     display: flex;
@@ -31,6 +31,10 @@ footer {
                 color: rgba(255, 255, 255, 0.603);
             }
         }
+
+        @media  screen and (max-width: 1000px) {
+            display: none;
+        }
     }
 
     .footer-right {
@@ -38,5 +42,76 @@ footer {
         display: grid;
         grid-template-rows: 50% 50%;
         margin-top: 60px;
+
+        @media  screen and (max-width: 1000px) {
+            background-color: rgb(33,32,30);
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 0;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact {
+            width: 100%;
+            margin-left: 80px;
+
+            @media  screen and (max-width: 1000px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+            }
+
+            h3 {
+                font-size: 1rem;
+                text-transform: uppercase;
+                font-family: $font-roboto;    
+                font-weight: 600;
+                letter-spacing: 2px;
+                margin-top: 8px;
+                line-height: 50px;
+            }
+
+            input {
+                width: 33%;
+                background: none;
+                border: 1px solid $color1;
+                height: 40px;
+                border-radius: 5px;
+                padding: 5px 10px;
+                outline: none;
+                color: white;
+                font-family: $font-roboto;
+                font-size: 1.1rem;
+                padding: 0 20px;
+            }
+        }
+
+        .social {
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+            h3 {
+                font-size: 1.1rem;
+                text-transform: uppercase;
+                font-family: $font-roboto;    
+                font-weight: 600;
+                letter-spacing: 2px;
+                margin: 35px 0 0 80px;
+                line-height: 50px;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                gap: 40px;
+                margin: 50px 0 0 20px;
+                color: rgba(255, 255, 255, 0.26);
+            }
+
+        }
     }
 }
