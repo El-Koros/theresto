@@ -1,0 +1,22 @@
+.comment {
+    height: 80vh;
+    background-color: rgb(33, 33, 33);
+    position: relative;
+
+    .map {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .comment-text {
+        border: 1px solid red;
+    }
+
+}
